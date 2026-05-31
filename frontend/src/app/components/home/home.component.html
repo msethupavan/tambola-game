@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="card home-card">
+    <h1>🎲 Tambola Game</h1>
+    <p class="subtitle">Play Tambola with friends over WiFi</p>
+
+    <div class="button-container">
+      <button (click)="createRoom()" class="primary-btn">
+        🎮 Create Room (Host)
+      </button>
+      <button (click)="joinRoom()" class="secondary-btn">
+        👥 Join Room (Player)
+      </button>
+    </div>
+
+    <div class="info-section">
+      <h3>📡 Network Info</h3>
+      <div class="info-box">
+        <p><strong>Server Address:</strong></p>
+        <code class="server-url">{{ networkURL }}</code>
+        <p class="info-text">
+          Share this URL with players on the same WiFi network
+        </p>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <h3>How to Play</h3>
+      <ol>
+        <li>Host creates a room and shares the room code</li>
+        <li>Players join using the room code</li>
+        <li>Host starts the game and calls numbers</li>
+        <li>Players mark numbers on their tickets</li>
+        <li>Claim patterns: Early 5, Top/Middle/Bottom Line, Full House</li>
+      </ol>
+    </div>
+  </div>
+</div>

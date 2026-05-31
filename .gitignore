@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Angular
+dist/
+.angular/
+out-tsc/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.history
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+*.orig
+
+# Build output
+build/
+dist/
+*.tgz
+*.tar.gz
+
+# Runtime
+.cache
+.npm
+.nyc_output
+coverage/
+
+# Misc
+*.bak
+*.tmp
+*.temp

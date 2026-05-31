@@ -1,0 +1,155 @@
+<div class="container">
+  <!-- Setup Phase -->
+  <div *ngIf="gameStatus === 'setup'" class="card">
+    <h1>🎮 Create Room</h1>
+    <div class="form-group">
+      <label>Host Name:</label>
+      <input 
+        type="text" 
+        [(ngModel)]="hostName" 
+        placeholder="Enter your name"
+        (keyup.enter)="createRoom()">
+    </div>
+    <div class="btn-group">
+      <button (click)="createRoom()">Create Room</button>
+      <button (click)="goHome()" class="secondary">Back</button>
+    </div>
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  </div>
+
+  <!-- Waiting Phase -->
+  <div *ngIf="gameStatus === 'waiting'" class="card">
+    <h1>🎲 Room Created</h1>
+    <div class="room-code-display">
+      <h2>Room Code</h2>
+      <div class="room-code">{{ roomCode }}</div>
+      <p>Share this code with players to join</p>
+    </div>
+
+    <div class="players-section">
+      <h3>Players ({{ getPlayerCount() }})</h3>
+      <div class="players-list">
+        <div *ngFor="let player of players" class="player-item">
+          <span>{{ player.name }}</span>
+          <span *ngIf="player.isHost" class="host-badge">HOST</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-group">
+      <button (click)="startGame()" [disabled]="players.length < 1">
+        Start Game
+      </button>
+      <button (click)="goHome()" class="danger">Cancel</button>
+    </div>
+    <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  </div>
+
+  <!-- Playing Phase -->
+  <div *ngIf="gameStatus === 'playing'" class="card">
+    <div class="game-header">
+      <h1>🎲 Game in Progress</h1>
+      <div class="room-code-small">Room: {{ roomCode }}</div>
+    </div>
+
+    <div class="current-number-section">
+      <div class="current-number">
+        <h2>Current Number</h2>
+        <div class="number-display">
+          {{ currentNumber || '-' }}
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-section">
+      <div class="btn-group">
+        <button (click)="callNumber()" [disabled]="autoCallEnabled || calledNumbers.length >= 90">
+          📢 Call Next Number
+        </button>
+        <button (click)="toggleAutoCalling()" 
+                [class.active]="autoCallEnabled"
+                [disabled]="calledNumbers.length >= 90">
+          {{ autoCallEnabled ? '⏸️ Stop Auto' : '▶️ Auto Call' }}
+        </button>
+      </div>
+      <p class="call-info">Called: {{ calledNumbers.length }} / 90</p>
+    </div>
+
+    <div class="called-numbers-section">
+      <h3>Called Numbers</h3>
+      <div class="numbers-grid">
+        <div *ngFor="let num of calledNumbers" class="number-chip">
+          {{ num }}
+        </div>
+      </div>
+    </div>
+
+    <div class="winners-section">
+      <h3>🏆 Winners</h3>
+      <div class="winners-list">
+        <div class="winner-item" [class.claimed]="isPatternClaimed('early5')">
+          <span class="pattern-name">🌟 Early 5</span>
+          <span class="winner-name">{{ getPatternWinner('early5') }}</span>
+        </div>
+        <div class="winner-item" [class.claimed]="isPatternClaimed('topLine')">
+          <span class="pattern-name">⬆️ Top Line</span>
+          <span class="winner-name">{{ getPatternWinner('topLine') }}</span>
+        </div>
+        <div class="winner-item" [class.claimed]="isPatternClaimed('middleLine')">
+          <span class="pattern-name">➡️ Middle Line</span>
+          <span class="winner-name">{{ getPatternWinner('middleLine') }}</span>
+        </div>
+        <div class="winner-item" [class.claimed]="isPatternClaimed('bottomLine')">
+          <span class="pattern-name">⬇️ Bottom Line</span>
+          <span class="winner-name">{{ getPatternWinner('bottomLine') }}</span>
+        </div>
+        <div class="winner-item" [class.claimed]="isPatternClaimed('fullHouse')">
+          <span class="pattern-name">🏠 Full House</span>
+          <span class="winner-name">{{ getPatternWinner('fullHouse') }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-group">
+      <button (click)="endGame()" class="danger">End Game</button>
+    </div>
+    <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  </div>
+
+  <!-- Finished Phase -->
+  <div *ngIf="gameStatus === 'finished'" class="card">
+    <h1>🎉 Game Finished</h1>
+    
+    <div class="winners-section">
+      <h2>🏆 Final Results</h2>
+      <div class="winners-list">
+        <div class="winner-item claimed">
+          <span class="pattern-name">🌟 Early 5</span>
+          <span class="winner-name">{{ getPatternWinner('early5') }}</span>
+        </div>
+        <div class="winner-item claimed">
+          <span class="pattern-name">⬆️ Top Line</span>
+          <span class="winner-name">{{ getPatternWinner('topLine') }}</span>
+        </div>
+        <div class="winner-item claimed">
+          <span class="pattern-name">➡️ Middle Line</span>
+          <span class="winner-name">{{ getPatternWinner('middleLine') }}</span>
+        </div>
+        <div class="winner-item claimed">
+          <span class="pattern-name">⬇️ Bottom Line</span>
+          <span class="winner-name">{{ getPatternWinner('bottomLine') }}</span>
+        </div>
+        <div class="winner-item claimed">
+          <span class="pattern-name">🏠 Full House</span>
+          <span class="winner-name">{{ getPatternWinner('fullHouse') }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-group">
+      <button (click)="goHome()">Back to Home</button>
+    </div>
+  </div>
+</div>
