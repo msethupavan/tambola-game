@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="900" viewBox="0 0 1280 900" role="img" aria-label="Tambola Player Ticket View">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f9fafb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f3f4f6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="numberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="blueBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0284c7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0369a1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="purpleBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1" />
+    </linearGradient>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="14" flood-opacity="0.1"/>
+    </filter>
+    <filter id="numberShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1280" height="900" fill="url(#bgGrad)"/>
+  
+  <!-- Card -->
+  <rect x="100" y="30" width="1080" height="840" rx="20" fill="white" filter="url(#cardShadow)" stroke="#e5e7eb" stroke-width="1"/>
+  
+  <!-- Header -->
+  <text x="640" y="90" font-family="'Segoe UI', Arial" font-size="36" font-weight="700" text-anchor="middle" fill="#0f172a">🎲 Game On!</text>
+  
+  <!-- Room Info -->
+  <rect x="1000" y="60" width="150" height="50" rx="8" fill="#edf2f7"/>
+  <text x="1075" y="90" font-family="'Segoe UI', Arial" font-size="18" font-weight="600" text-anchor="middle" fill="#4f46e5">Room: A1B2C3</text>
+  
+  <!-- Current Number Display -->
+  <rect x="450" y="130" width="380" height="140" rx="16" fill="url(#numberGrad)" filter="url(#cardShadow)"/>
+  <text x="640" y="165" font-family="'Segoe UI', Arial" font-size="18" text-anchor="middle" fill="#e0e7ff" font-weight="600">Current Number</text>
+  <text x="640" y="235" font-family="'Segoe UI', Arial" font-size="96" text-anchor="middle" fill="white" font-weight="800" text-shadow="0 4px 20px rgba(0,0,0,0.2)">47</text>
+  
+  <!-- Your Ticket -->
+  <text x="120" y="320" font-family="'Segoe UI', Arial" font-size="20" font-weight="700" fill="#0f172a">Your Ticket</text>
+  
+  <!-- Ticket Grid 3x9 with random numbers -->
+  <g transform="translate(120,350)">
+    <rect width="1040" height="280" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    
+    <!-- Row 1 -->
+    <g font-family="'Segoe UI', Arial" font-size="24" font-weight="700" text-anchor="middle">
+      <!-- Col 1 (1-10) -->
+      <rect x="10" y="10" width="110" height="80" rx="8" fill="#dbeafe" stroke="#0284c7" stroke-width="2"/>
+      <text x="65" y="58" fill="#0f172a">8</text>
+      
+      <rect x="10" y="100" width="110" height="80" rx="8" fill="#d4fc79" stroke="#84cc16" stroke-width="2"/>
+      <text x="65" y="148" fill="#0f172a">15</text>
+      
+      <rect x="10" y="190" width="110" height="80" rx="8" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1" opacity="0.5"/>
+      <text x="65" y="238" fill="#9ca3af" opacity="0.5">-</text>
+      
+      <!-- Col 2 (11-20) -->
+      <rect x="130" y="10" width="110" height="80" rx="8" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+      <text x="185" y="58" fill="#0f172a">12</text>
+      
+      <rect x="130" y="100" width="110" height="80" rx="8" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1" opacity="0.5"/>
+      <text x="185" y="148" fill="#9ca3af" opacity="0.5">-</text>
+      
+      <rect x="130" y="190" width="110" height="80" rx="8" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+      <text x="185" y="238" fill="#0f172a">19</text>
+      
+      <!-- Col 3 (21-30) -->
+      <rect x="250" y="10" width="110" height="80" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+      <text x="305" y="58" fill="#92400e">22</text>
+      
+      <rect x="250" y="100" width="110" height="80" rx="8" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+      <text x="305" y="148" fill="#0f172a">27</text>
+      
+      <rect x="250" y="190" width="110" height="80" rx="8" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1" opacity="0.5"/>
+      <text x="305" y="238" fill="#9ca3af" opacity="0.5">-</text>
+      
+      <!-- Col 4 (31-40) -->
+      <rect x="370" y="10" width="110" height="80" rx="8" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1" opacity="0.5"/>
+      <text x="425" y="58" fill="#9ca3af" opacity="0.5">-</text>
+      
+      <rect x="370" y="100" width="110" height="80" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+      <text x="425" y="148" fill="#92400e">34</text>
+      
+      <rect x="370" y="190" width="110" height="80" rx="8" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+      <text x="425" y="238" fill="#0f172a">36</text>
+      
+      <!-- Col 5 (41-50) -->
+      <rect x="490" y="10" width="110" height="80" rx="8" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+      <text x="545" y="58" fill="#0f172a">41</text>
+      
+      <rect x="490" y="100" width="110" height="80" rx="8" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1" opacity="0.5"/>
+      <text x="545" y="148" fill="#9ca3af" opacity="0.5">-</text>
+      
+      <rect x="490" y="190" width="110" height="80" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+      <text x="545" y="238" fill="#92400e">48</text>
+      
+      <!-- Col 6 (51-60) -->
+      <rect x="610" y="10" width="110" height="80" rx="8" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1" opacity="0.5"/>
+      <text x="665" y="58" fill="#9ca3af" opacity="0.5">-</text>
+      
+      <rect x="610" y="100" width="110" height="80" rx="8" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+      <text x="665" y="148" fill="#0f172a">53</text>
+      
+      <rect x="610" y="190" width="110" height="80" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+      <text x="665" y="238" fill="#92400e">59</text>
+      
+      <!-- Col 7 (61-70) -->
+      <rect x="730" y="10" width="110" height="80" rx="8" fill="#dbeafe" stroke="#0284c7" stroke-width="2"/>
+      <text x="785" y="58" fill="#0f172a">61</text>
+      
+      <rect x="730" y="100" width="110" height="80" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+      <text x="785" y="148" fill="#92400e">68</text>
+      
+      <rect x="730" y="190" width="110" height="80" rx="8" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1" opacity="0.5"/>
+      <text x="785" y="238" fill="#9ca3af" opacity="0.5">-</text>
+      
+      <!-- Col 8 (71-80) -->
+      <rect x="850" y="10" width="110" height="80" rx="8" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1" opacity="0.5"/>
+      <text x="905" y="58" fill="#9ca3af" opacity="0.5">-</text>
+      
+      <rect x="850" y="100" width="110" height="80" rx="8" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+      <text x="905" y="148" fill="#0f172a">72</text>
+      
+      <rect x="850" y="190" width="110" height="80" rx="8" fill="#dbeafe" stroke="#0284c7" stroke-width="2"/>
+      <text x="905" y="238" fill="#0f172a">78</text>
+      
+      <!-- Col 9 (81-90) -->
+      <rect x="970" y="10" width="60" height="80" rx="8" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+      <text x="1000" y="58" fill="#0f172a">82</text>
+      
+      <rect x="970" y="100" width="60" height="80" rx="8" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1" opacity="0.5"/>
+      <text x="1000" y="148" fill="#9ca3af" opacity="0.5">-</text>
+      
+      <rect x="970" y="190" width="60" height="80" rx="8" fill="#dbeafe" stroke="#0284c7" stroke-width="2"/>
+      <text x="1000" y="238" fill="#0f172a">88</text>
+    </g>
+  </g>
+  
+  <!-- Ticket Hint -->
+  <text x="120" y="660" font-family="'Segoe UI', Arial" font-size="14" fill="#64748b" font-weight="500">Tap numbers to mark/unmark them • Green = Called • Yellow = Manually Marked</text>
+  
+  <!-- Claim Section -->
+  <text x="120" y="710" font-family="'Segoe UI', Arial" font-size="20" font-weight="700" fill="#0f172a">🏆 Claim Patterns</text>
+  
+  <!-- Buttons -->
+  <rect x="120" y="740" width="240" height="60" rx="12" fill="url(#greenBtn)" filter="url(#cardShadow)"/>
+  <text x="240" y="777" font-family="'Segoe UI', Arial" font-size="18" font-weight="600" text-anchor="middle" fill="white">🌟 Early 5</text>
+  
+  <rect x="380" y="740" width="240" height="60" rx="12" fill="url(#blueBtn)" filter="url(#cardShadow)"/>
+  <text x="500" y="777" font-family="'Segoe UI', Arial" font-size="18" font-weight="600" text-anchor="middle" fill="white">⬆️ Top Line</text>
+  
+  <rect x="640" y="740" width="240" height="60" rx="12" fill="url(#blueBtn)" filter="url(#cardShadow)"/>
+  <text x="760" y="777" font-family="'Segoe UI', Arial" font-size="18" font-weight="600" text-anchor="middle" fill="white">↔️ Middle Line</text>
+  
+  <rect x="900" y="740" width="260" height="60" rx="12" fill="url(#purpleBtn)" filter="url(#cardShadow)"/>
+  <text x="1030" y="777" font-family="'Segoe UI', Arial" font-size="18" font-weight="600" text-anchor="middle" fill="white">🎰 Full House</text>
+</svg>

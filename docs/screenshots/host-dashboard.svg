@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-label="Tambola Host Dashboard">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f9fafb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f3f4f6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="numberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16a34a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#15803d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="amberBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="redBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="14" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1280" height="800" fill="url(#bgGrad)"/>
+  
+  <!-- Card -->
+  <rect x="60" y="40" width="1160" height="720" rx="20" fill="white" filter="url(#cardShadow)" stroke="#e5e7eb" stroke-width="1"/>
+  
+  <!-- Header -->
+  <text x="120" y="95" font-family="'Segoe UI', Arial" font-size="28" font-weight="700" fill="#0f172a">🎲 Game On!</text>
+  
+  <!-- Room Info Card -->
+  <rect x="900" y="60" width="280" height="80" rx="12" fill="#f0f4ff" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="920" y="85" font-family="'Segoe UI', Arial" font-size="13" font-weight="600" fill="#6b7280">Room Code</text>
+  <text x="920" y="112" font-family="'Courier New', monospace" font-size="28" font-weight="700" fill="#4f46e5">A1B2C3</text>
+  <text x="920" y="135" font-family="'Segoe UI', Arial" font-size="12" fill="#64748b">Players: 6 joined</text>
+  
+  <!-- Current Number Display (Large) -->
+  <rect x="120" y="160" width="380" height="180" rx="16" fill="url(#numberGrad)" filter="url(#cardShadow)"/>
+  <text x="310" y="200" font-family="'Segoe UI', Arial" font-size="18" text-anchor="middle" fill="#e0e7ff" font-weight="600">Current Number</text>
+  <text x="310" y="305" font-family="'Segoe UI', Arial" font-size="120" text-anchor="middle" fill="white" font-weight="800" text-shadow="0 4px 20px rgba(0,0,0,0.2)">47</text>
+  
+  <!-- Statistics -->
+  <rect x="530" y="160" width="180" height="85" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="550" y="180" font-family="'Segoe UI', Arial" font-size="13" font-weight="600" fill="#0c4a6e">Numbers Called</text>
+  <text x="550" y="210" font-family="'Segoe UI', Arial" font-size="36" font-weight="700" fill="#0284c7">37 / 90</text>
+  
+  <rect x="730" y="160" width="170" height="85" rx="12" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="750" y="180" font-family="'Segoe UI', Arial" font-size="13" font-weight="600" fill="#7c2d12">Winners</text>
+  <text x="750" y="210" font-family="'Segoe UI', Arial" font-size="36" font-weight="700" fill="#dc2626">2</text>
+  
+  <!-- Players List -->
+  <text x="120" y="395" font-family="'Segoe UI', Arial" font-size="18" font-weight="700" fill="#0f172a">Active Players</text>
+  <rect x="120" y="410" width="350" height="280" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  
+  <text x="140" y="445" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="#0f172a">👤 You (Host)</text>
+  <circle cx="370" cy="438" r="12" fill="#10b981"/>
+  
+  <text x="140" y="485" font-family="'Segoe UI', Arial" font-size="14" fill="#334155">• Alice</text>
+  <circle cx="370" cy="478" r="8" fill="#10b981"/>
+  
+  <text x="140" y="520" font-family="'Segoe UI', Arial" font-size="14" fill="#334155">• Bob</text>
+  <circle cx="370" cy="513" r="8" fill="#10b981"/>
+  
+  <text x="140" y="555" font-family="'Segoe UI', Arial" font-size="14" fill="#334155">• Charlie</text>
+  <circle cx="370" cy="548" r="8" fill="#10b981"/>
+  
+  <text x="140" y="590" font-family="'Segoe UI', Arial" font-size="14" fill="#334155">• Diana</text>
+  <circle cx="370" cy="583" r="8" fill="#10b981"/>
+  
+  <text x="140" y="625" font-family="'Segoe UI', Arial" font-size="14" fill="#334155">• Eve</text>
+  <circle cx="370" cy="618" r="8" fill="#10b981"/>
+  
+  <text x="140" y="660" font-family="'Segoe UI', Arial" font-size="14" fill="#334155">• Frank</text>
+  <circle cx="370" cy="653" r="8" fill="#10b981"/>
+  
+  <!-- Control Buttons -->
+  <rect x="530" y="410" width="300" height="70" rx="12" fill="url(#greenBtn)" filter="url(#cardShadow)"/>
+  <text x="680" y="459" font-family="'Segoe UI', Arial" font-size="18" font-weight="600" text-anchor="middle" fill="white">📞 Call Next Number</text>
+  
+  <rect x="860" y="410" width="300" height="70" rx="12" fill="url(#amberBtn)" filter="url(#cardShadow)"/>
+  <text x="1010" y="459" font-family="'Segoe UI', Arial" font-size="18" font-weight="600" text-anchor="middle" fill="white">⚡ Auto Call (ON)</text>
+  
+  <rect x="530" y="510" width="300" height="70" rx="12" fill="#0284c7"/>
+  <text x="680" y="559" font-family="'Segoe UI', Arial" font-size="18" font-weight="600" text-anchor="middle" fill="white">📋 View Statistics</text>
+  
+  <rect x="860" y="510" width="300" height="70" rx="12" fill="url(#redBtn)" filter="url(#cardShadow)"/>
+  <text x="1010" y="559" font-family="'Segoe UI', Arial" font-size="18" font-weight="600" text-anchor="middle" fill="white">🏁 End Game</text>
+  
+  <!-- Called Numbers History -->
+  <text x="530" y="635" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="#0f172a">Recently Called: 47, 23, 51, 8, 64, 29, 73, 15, 42, 6...</text>
+</svg>
