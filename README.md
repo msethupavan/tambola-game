@@ -61,6 +61,28 @@ Tambola (Housie/Bingo) is a popular game of chance where players mark numbers on
 
 ---
 
+## 📸 Screenshots
+
+### Home Screen
+
+![Home Screen](docs/screenshots/home-screen.svg)
+
+### Host Dashboard
+
+![Host Dashboard](docs/screenshots/host-dashboard.svg)
+
+### Player Ticket View
+
+![Player Ticket View](docs/screenshots/player-ticket.svg)
+
+### Mobile Responsive View
+
+![Mobile Responsive View](docs/screenshots/mobile-view.svg)
+
+> Note: These are placeholder visuals in the repository. Replace them with actual app screenshots anytime using the same filenames to keep README links intact.
+
+---
+
 ## 🚀 Quick Start
 
 ### Prerequisites
